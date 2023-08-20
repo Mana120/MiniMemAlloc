@@ -3,11 +3,14 @@ This project employs a memory allocation strategy where memory is allocated in m
 
 Here's how the project incorporates these techniques:
 
-Memory Allocation in Powers of 2: The splitmem() function splits the available memory into blocks, each with a size that is a power of 2. This approach ensures efficient memory allocation by providing a range of block sizes, making it easier to find a suitable block for a requested memory size.
+# Memory Allocation in Powers of 2:
+The splitmem() function splits the available memory into blocks, each with a size that is a power of 2. This approach ensures efficient memory allocation by providing a range of block sizes, making it easier to find a suitable block for a requested memory size.
 
-Minimizing Memory Wastage: When a block is allocated, the program checks if there is unused space within the block. If the allocated memory size is smaller than the block size, the block is divided into two parts: one for the allocated memory and another for the remaining unused space. This technique minimizes memory wastage by using the available space effectively.
+# Minimizing Memory Wastage: 
+When a block is allocated, the program checks if there is unused space within the block. If the allocated memory size is smaller than the block size, the block is divided into two parts: one for the allocated memory and another for the remaining unused space. This technique minimizes memory wastage by using the available space effectively.
 
-Block Merging: When deallocating memory, the program checks adjacent blocks. If two adjacent blocks are both deallocated and have the same size, they are merged back together into a single larger block. This merging process optimizes memory usage by reducing fragmentation and maximizing the availability of larger memory blocks for future allocations.
+# Block Merging:
+When deallocating memory, the program checks adjacent blocks. If two adjacent blocks are both deallocated and have the same size, they are merged back together into a single larger block. This merging process optimizes memory usage by reducing fragmentation and maximizing the availability of larger memory blocks for future allocations.
 
 These techniques collectively enhance memory allocation efficiency and minimize memory fragmentation, resulting in more effective utilization of available memory resources.
 
